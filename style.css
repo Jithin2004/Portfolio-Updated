@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color); 
+    color: var(--text-color);
+}
+
+section { 
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: rgb(7, 7, 82);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-radius: 4rem;
+    margin-top: 3px;
+    
+    
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+     color: var(--main-color);
+
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color );
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .img-section {
+    width: auto;
+    height: auto;
+} */
+
+.img-section {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.img-section::before{
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 140%;
+    background: linear-gradient(#00ccff, #d500f9);
+    animation: rotate 4s linear infinite;
+    z-index: -1;
+
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.img-section::after{
+    content: '';
+    position: absolute;
+    background: #0e1538;
+    inset: 8px;
+    z-index: -1; 
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-img img {
+    position: relative;
+    }
+
+
+
+.home-content p {
+    font-size: 1.6rem;
+    font-family: sans-serif;
+}
+
+.social-media a { 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem; 
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0; 
+    transition: 0.5s ease;
+}
+
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease; 
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.about-content{
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 35vw;
+}
+
+.heading {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.Projects p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;  
+}
+
+.project-content {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+}
+
+.Contact p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;  
+} 
+
+.contact-content {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+}
+
+footer {
+    background-color: #323946;
+    height: auto;
+    font-size: 1.6rem;
+    width: 100%;
+    
+}
+
+.social-media-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.social-media-footer a { 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem; 
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0; 
+    transition: 0.5s ease;
+}
+
+.social-media-footer a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Add your existing styles here */
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        padding: 1rem 9%;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        text-align: center;
+        z-index: 99;
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .home-content {
+        text-align: center;
+    }
+
+    .img-section {
+        max-width: 100%; /* Limits the image to the width of its container */
+        max-height: 100%; /* Limits the image to the height of its container */
+        width: 350px; /* Ensures the image scales proportionally */
+        height: auto; /* Ensures the image scales proportionally */
+
+
+    }
+
+    .img-section::before {
+        width: 100%;
+        height: 100%;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .about-img img {
+        width: 80%;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+    
+    
+}  
